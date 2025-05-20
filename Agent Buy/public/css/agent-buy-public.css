@@ -1,0 +1,54 @@
+/**
+ * 代购链接前台样式
+ */
+
+/* Agent Buy 标题 */
+.agent-buy-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 代购平台容器 */
+.agent-buy-platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* 代购平台链接 */
+.agent-buy-platform {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.agent-buy-platform:hover {
+    opacity: 0.8;
+}
+
+/* 代购平台图片 */
+.agent-buy-platform-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* 响应式样式 */
+@media screen and (max-width: 480px) {
+    .agent-buy-platforms {
+        gap: 8px;
+    }
+    
+    .agent-buy-platform-image {
+        width: 35px;
+        height: 35px;
+    }
+}

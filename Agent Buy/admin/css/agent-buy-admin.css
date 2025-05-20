@@ -1,0 +1,248 @@
+.agent-buy-admin {}
+
+.agent-buy-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.agent-buy-form-container {
+    flex: 0 0 300px;
+    min-width: 300px;
+    max-width: 350px;
+    order: -1;
+}
+
+.agent-buy-list-container {
+    flex: 1;
+    min-width: 0;
+}
+
+.agent-buy-form-wrapper {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-field input[type="text"],
+.form-field textarea,
+.form-field select {
+    width: 100%;
+}
+
+.agent-buy-image-container {
+    margin: 10px 0;
+}
+
+.agent-buy-image-preview {
+    margin-bottom: 10px;
+}
+
+.quick-edit-form {
+    background: #fff;
+    padding: 20px;
+    margin: 12px 0;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.quick-edit-form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    margin-bottom: 20px;
+    align-items: start;
+    width: 100%;
+}
+
+.quick-edit-form .form-field,
+.quick-edit-form .inline-edit-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    width: 100%;
+    grid-column: span 1;
+}
+
+.quick-edit-form .inline-edit-group {
+    margin-bottom: 12px;
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.quick-edit-form .inline-edit-group.image-group {
+    grid-column: span 2;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.quick-edit-form .inline-edit-group.image-group .agent-buy-image-preview {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.quick-edit-form .inline-edit-group.image-group .agent-buy-image-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    border: 1px solid #dcdcde;
+    background: #fff;
+    padding: 2px;
+}
+
+.quick-edit-form label {
+    display: block;
+    font-weight: 600;
+    color: #23282d;
+    margin-bottom: 4px;
+}
+
+.quick-edit-form h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dcdcde;
+    color: #1d2327;
+    font-size: 14px;
+}
+
+.quick-edit-form input[type="text"],
+.quick-edit-form textarea,
+.quick-edit-form select,
+.quick-edit-form input[type="number"] {
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 8px;
+    border: 1px solid #dcdcde;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.quick-edit-form input[type="text"]:focus,
+.quick-edit-form textarea:focus,
+.quick-edit-form select:focus,
+.quick-edit-form input[type="number"]:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.quick-edit-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+.quick-edit-form .agent-buy-image-container {
+    margin: 0;
+    padding: 12px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    border: 1px solid #dcdcde;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.quick-edit-form .agent-buy-image-container .agent-buy-image-preview {
+    margin-bottom: 10px;
+}
+
+.quick-edit-form .agent-buy-image-container .button-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.quick-edit-form .agent-buy-image-container button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-edit-actions {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #dcdcde;
+    text-align: right;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    width: 100%;
+}
+
+.quick-edit-actions button {
+    min-width: 70px;
+    height: 30px;
+    padding: 0 12px;
+    margin-left: 5px;
+}
+
+.quick-edit-actions button.button-primary {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+}
+
+.quick-edit-actions button.button-primary:hover {
+    background: #135e96;
+    border-color: #135e96;
+    color: #fff;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 782px) {
+    .quick-edit-form-fields {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .quick-edit-form .inline-edit-group,
+    .quick-edit-form .inline-edit-group.image-group {
+        grid-column: span 1;
+    }
+    
+    .quick-edit-actions {
+        grid-column: 1;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .quick-edit-form {
+        padding: 15px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .quick-edit-form .agent-buy-image-container .button-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .quick-edit-form .agent-buy-image-container button {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+}
